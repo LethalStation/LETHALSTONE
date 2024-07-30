@@ -357,8 +357,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 //			dat += "<b>Family:</b> <a href='?_src_=prefs;preference=family'>Unknown</a><BR>" // Disabling until its working
 			dat += "<b>Dominance:</b> <a href='?_src_=prefs;preference=domhand'>[domhand == 1 ? "Left-handed" : "Right-handed"]</a><BR>"
 
-			dat += "<b>ERP Panel:</b> <a href='?_src_=prefs;preference=sexable'>[sexable == TRUE ? "Yes" : "No"]</a><BR>"
-
 /*
 			dat += "<br><br><b>Special Names:</b><BR>"
 			var/old_group
