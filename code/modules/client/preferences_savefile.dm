@@ -572,7 +572,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["update_mutant_colors"] , update_mutant_colors)
 	WRITE_FILE(S["headshot_link"] , headshot_link)
 	WRITE_FILE(S["pronouns"] , pronouns)
-	WRITE_FILE(S["voice_type"], voice_type)
+	WRITE_FILE(S["voice_type"] , voice_type)
 
 	WRITE_FILE(S["is_updated_for_genitalia"], TRUE)
 

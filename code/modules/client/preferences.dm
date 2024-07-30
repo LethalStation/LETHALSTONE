@@ -91,7 +91,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/static/datum/patron/default_patron = /datum/patron/divine/astrata
 	var/list/features = MANDATORY_FEATURE_LIST
 	var/list/randomise = list(RANDOM_UNDERWEAR = TRUE, RANDOM_UNDERWEAR_COLOR = TRUE, RANDOM_UNDERSHIRT = TRUE, RANDOM_SOCKS = TRUE, RANDOM_BACKPACK = TRUE, RANDOM_JUMPSUIT_STYLE = FALSE, RANDOM_SKIN_TONE = TRUE, RANDOM_EYE_COLOR = TRUE)
-	var/list/friendlyGenders = list("Masculine" = "male", "Feminine" = "female")
+	var/list/friendlyGenders = list("male" = "masculine", "female" = "feminine")
 	var/phobia = "spiders"
 	var/shake = TRUE
 	var/sexable = FALSE
@@ -327,6 +327,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 				dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a> <a href='?_src_=prefs;preference=name;task=random'>\[R\]</a>"
 
 			// LETHALSTONE EDIT BEGIN: add pronoun prefs
+			dat += "<BR>"
 			dat += "<b>Pronouns:</b> <a href='?_src_=prefs;preference=pronouns;task=input'>[pronouns]</a><BR>"
 			// LETHALSTONE EDIT END
 
@@ -1738,7 +1739,8 @@ Slots: [job.spawn_positions]</span>
 					if(pickedGender && pickedGender != gender)
 						gender = pickedGender
 						ResetJobs()
-						to_chat(user, "<font color='red'>Classes reset.</font>")
+						to_chat(user, "<font color='red'>Your character will now use a [friendlyGenders[pickedGender]] sprite.")
+						to_chat(user, "<font color='red'><b>Your classes have been reset.</b></font>")
 						random_character(gender)
 					genderize_customizer_entries()
 				if("domhand")
@@ -2079,9 +2081,10 @@ Slots: [job.spawn_positions]</span>
 
 	character.headshot_link = headshot_link
 
-	// LETHALSTONE ADDITION BEGIN: pronouns
+	// LETHALSTONE ADDITION BEGIN: additional customizations
 
 	character.pronouns = pronouns
+	character.voice_type = voice_type
 
 	// LETHALSTONE ADDITION END
 
