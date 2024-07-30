@@ -35,7 +35,6 @@
 		pants = /obj/item/clothing/under/roguetown/tights/black
 		head = /obj/item/clothing/head/roguetown/nightman
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	H.virginity = TRUE
 	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
 	beltl = /obj/item/keyring/archivist
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid

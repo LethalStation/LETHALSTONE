@@ -36,7 +36,6 @@
 
 /mob/living/proc/get_extra_mob_descriptors()
 	return list(
-		/datum/mob_descriptor/defiant,
 		/datum/mob_descriptor/age,
 		)
 

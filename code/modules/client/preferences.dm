@@ -152,7 +152,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/headshot_link
 	var/list/violated = list()
 	var/list/descriptor_entries = list()
-	var/defiant = TRUE
 
 
 /datum/preferences/New(client/C)
@@ -684,7 +683,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	dat += "</td>"
 	dat += "<td width='33%' align='right'>"
-	dat += "<b>Be defiant:</b> <a href='?_src_=prefs;preference=be_defiant'>[(defiant) ? "Yes":"No"]</a><br>"
 	dat += "<b>Be voice:</b> <a href='?_src_=prefs;preference=schizo_voice'>[(toggles & SCHIZO_VOICE) ? "Enabled":"Disabled"]</a>"
 	dat += "</td>"
 	dat += "</tr>"
@@ -1920,13 +1918,6 @@ Slots: [job.spawn_positions]</span>
 				if("widescreenpref")
 					widescreenpref = !widescreenpref
 					user.client.change_view(CONFIG_GET(string/default_view))
-				
-				if("be_defiant")
-					defiant = !defiant
-					if(defiant)
-						to_chat(user, span_notice("You will now have resistance from people violating you, but be punished for trying to violate others. This is not full protection."))
-					else
-						to_chat(user, span_boldwarning("You fully immerse yourself in the grim experience, waiving your resistance from people violating you, but letting you do the same unto other non-defiants"))
 
 				if("schizo_voice")
 					toggles ^= SCHIZO_VOICE
@@ -2053,7 +2044,6 @@ Slots: [job.spawn_positions]</span>
 	character.socks = socks
 	character.set_patron(selected_patron)
 	character.backpack = backpack
-	character.defiant = defiant
 
 	character.jumpsuit_style = jumpsuit_style
 
