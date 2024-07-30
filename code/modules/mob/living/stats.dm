@@ -1,3 +1,10 @@
+#define STAT_STRENGTH "strength"
+#define STAT_PERCEPTION "perception"
+#define STAT_INTELLIGENCE "intelligence"
+#define STAT_CONSTITUTION "constitution"
+#define STAT_ENDURANCE "endurance"
+#define STAT_SPEED "speed"
+#define STAT_FORTUNE "fortune"
 
 /mob/living
 	var/STASTR = 10
@@ -58,13 +65,8 @@
 				change_stat(S, 1)
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
-		if(H.dna.species)
-			if(gender == FEMALE)
-				for(var/S in H.dna.species.specstats_f)
-					change_stat(S, H.dna.species.specstats_f[S])
-			else
-				for(var/S in H.dna.species.specstats)
-					change_stat(S, H.dna.species.specstats[S])
+		if (H.statpack)
+			H.statpack.apply_to_human(H)
 		switch(H.age)
 			if(AGE_MIDDLEAGED)
 				change_stat("speed", -1)
@@ -106,7 +108,7 @@
 //			statindex[index]["stat"] = stat
 //			statindex[index]["amt"] = amt
 	var/newamt = 0
-	switch(stat)
+	switch(stat) // what in the everliving fuck is this?
 		if("strength")
 			newamt = STASTR + amt
 			if(BUFSTR < 0)

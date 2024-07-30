@@ -3489,4 +3489,9 @@
 #include "modular_hearthstone\code\game\objects\structures\longsleep.dm"
 #include "modular_hearthstone\code\interface\LOOC.dm"
 #include "modular_hearthstone\code\modules\mob\living\simple_animal\rogue\creacher\volf.dm"
+#include "modular_lethalstone\code\datums\statpacks\wildcard.dm"
+#include "modular_lethalstone\code\datums\statpacks\mental.dm"
+#include "modular_lethalstone\code\datums\statpacks\agile.dm"
+#include "modular_lethalstone\code\datums\statpacks\physical.dm"
+#include "modular_lethalstone\code\datums\_statpacks.dm"
 // END_INCLUDE

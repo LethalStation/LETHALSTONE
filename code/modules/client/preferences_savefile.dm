@@ -326,6 +326,16 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		charflaw = GLOB.character_flaws[charflaw]
 		charflaw = new charflaw()
 
+/datum/preferences/proc/_load_statpack(S)
+	var/statpack_type
+	S["statpack"] >> statpack_type
+	if (statpack_type)
+		statpack = new statpack_type()
+	else
+		statpack = pick(GLOB.statpacks)
+		statpack = GLOB.statpacks[statpack]
+		//statpack = new statpack
+
 /datum/preferences/proc/_load_appearence(S)
 	S["real_name"]			>> real_name
 	S["gender"]				>> gender
@@ -382,6 +392,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	_load_flaw(S)
 
+	// LETHALSTONE edit: jank-ass load our statpack choice
+	_load_statpack(S)
+
 	if(!S["features["mcolor"]"] || S["features["mcolor"]"] == "#000")
 		WRITE_FILE(S["features["mcolor"]"]	, "#FFF")
 	if(!S["features["mcolor2"]"] || S["features["mcolor2"]"] == "#000")
@@ -425,8 +438,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(!valid_headshot_link(null, headshot_link, TRUE))
 		headshot_link = null
 
+	// LETHALSTONE EDIT: load our new stuff
 	S["pronouns"] >> pronouns
 	S["voice_type"] >> voice_type
+
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
 		update_character(needs_update, S)		//needs_update == savefile_version if we need an update (positive integer)
@@ -571,6 +586,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["headshot_link"] , headshot_link)
 	WRITE_FILE(S["pronouns"] , pronouns)
 	WRITE_FILE(S["voice_type"] , voice_type)
+	WRITE_FILE(S["statpack"] , statpack.type)
 
 	WRITE_FILE(S["is_updated_for_genitalia"], TRUE)
 
