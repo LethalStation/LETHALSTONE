@@ -51,9 +51,6 @@
 #endif
 
 /mob/living/carbon/human/Initialize()
-#ifdef MATURESERVER
-	sexcon = new /datum/sex_controller(src)
-#endif
 	verbs += /mob/living/proc/mob_sleep
 	verbs += /mob/living/proc/lay_down
 
@@ -121,7 +118,6 @@
 		AddComponent(/datum/component/mood)
 
 /mob/living/carbon/human/Destroy()
-	QDEL_NULL(sexcon)
 	SShumannpc.processing -= src
 	QDEL_NULL(physiology)
 	GLOB.human_list -= src

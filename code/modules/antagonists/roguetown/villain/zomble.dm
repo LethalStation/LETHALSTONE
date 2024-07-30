@@ -248,8 +248,6 @@
 		qdel(src)
 		return
 
-	zombie.can_do_sex = TRUE //lewd
-
 	zombie.blood_volume = BLOOD_VOLUME_NORMAL
 	zombie.setOxyLoss(0, updating_health = FALSE, forced = TRUE) //zombles dont breathe
 	zombie.setToxLoss(0, updating_health = FALSE, forced = TRUE) //zombles are immune to poison
