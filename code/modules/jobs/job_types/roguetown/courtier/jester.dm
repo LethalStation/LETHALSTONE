@@ -53,5 +53,5 @@
 		to_chat(H, "Your humor errs kinder this dae, though whether you indulge it or not is up to you.")
 	else	
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Joker >:(
-		to_chat(H, "Your humor errs darker this dae, though whether you dingule it or not is up to you.")
+		to_chat(H, "Your humor errs darker this dae, though whether you indulge it or not is up to you.")
 
