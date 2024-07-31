@@ -3492,4 +3492,6 @@
 #include "modular_lethalstone\code\datums\statpacks\agile.dm"
 #include "modular_lethalstone\code\datums\statpacks\physical.dm"
 #include "modular_lethalstone\code\datums\_statpacks.dm"
+#include "modular_lethalstone\modules\cooking_improvements\code\buffs.dm"
+#include "modular_lethalstone\modules\cooking_improvements\code\pies.dm"
 // END_INCLUDE
