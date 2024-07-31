@@ -7,6 +7,7 @@
 	spawn_positions = 1
 
 	allowed_races = RACES_ALL_KINDS
+	allowed_sexes = list(MALE, FEMALE)
 
 	tutorial = "The Grenzelhofts were known for their Jesters, wisemen with a tongue just as sharp as their wit. \
 		You command a position of a fool, envious of the position your superiors have upon you. \
@@ -38,16 +39,19 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/music, pick(1,2), TRUE)
-		H.STASTR = rand(1, 20)
-		H.STAINT = rand(1, 20)
-		H.STALUC = rand(1, 20)
+		H.change_stat("strength", rand(-5, 5))
+		H.change_stat("intelligence", rand(-5, 5))
+		H.change_stat("fortune", rand(-5, 5))
 		H.cmode_music = 'sound/music/combat_jester.ogg'
 
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LEAPER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
+
 	if(prob(50))	
 		ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC) // Jester :3
+		to_chat(H, "Your humor errs kinder this dae, though whether you indulge it or not is up to you.")
 	else	
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Joker >:(
+		to_chat(H, "Your humor errs darker this dae, though whether you indulge it or not is up to you.")
 

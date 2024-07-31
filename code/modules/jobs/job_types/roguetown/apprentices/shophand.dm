@@ -31,6 +31,7 @@
 		beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 		beltl = /obj/item/keyring/merchant
 		backr = /obj/item/storage/backpack/rogue/satchel
+
 	if(H.gender == FEMALE)
 		pants = /obj/item/clothing/under/roguetown/tights
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/blue
@@ -39,6 +40,7 @@
 		beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 		beltl = /obj/item/keyring/merchant
 		backr = /obj/item/storage/backpack/rogue/satchel
+
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 1, TRUE)

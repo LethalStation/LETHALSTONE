@@ -1,5 +1,5 @@
 /datum/advclass/dbomb
-	name = "Vagrant"
+	name = "Sapper"
 	tutorial = "Dwarves like to blow things up."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(/datum/species/dwarf/mountain)

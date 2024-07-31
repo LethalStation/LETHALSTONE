@@ -7,6 +7,7 @@
 	spawn_positions = 0
 
 	allowed_races = RACES_ALL_KINDS
+	allowed_sexes = list(MALE, FEMALE)
 	
 	outfit = /datum/outfit/job/roguetown/apothecary
 	outfit_female = /datum/outfit/job/roguetown/apothecary/female

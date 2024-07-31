@@ -1,7 +1,7 @@
 /datum/advclass/heartfelthand
 	name = "Hand of Heartfelt"
-	tutorial = "You serve your lord as the royal hand, taking care of all diplomatic actions in your relm. \
-	maybe one day you will become lord too."
+	tutorial = "You serve your lord as the Royal Hand, taking care of all diplomatic actions in your realm. \
+	Perhaps one day, you will be lord, too."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_TOLERATED_UP
 	outfit = /datum/outfit/job/roguetown/adventurer/heartfelthand

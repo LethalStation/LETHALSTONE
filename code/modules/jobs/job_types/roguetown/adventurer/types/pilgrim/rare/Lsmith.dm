@@ -28,56 +28,26 @@
 
 	backl = /obj/item/storage/backpack/rogue/backpack
 	backpack_contents = list(/obj/item/flint = 1, /obj/item/rogueore/coal=2, /obj/item/rogueore/iron=2, /obj/item/rogueore/silver=1)
+	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
 
-	if(H.gender == MALE)
-		
-		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
-
-		if(H.mind)
-			H.mind.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/masonry, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 6, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 6, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 6, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/smelting, 6, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-			if(H.age == AGE_OLD)
-				H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
-				H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)
-				H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 1, TRUE)
-				H.mind.adjust_skillrank(/datum/skill/craft/smelting, 1, TRUE)
-			H.change_stat("strength", 2)
-			H.change_stat("speed", -1)
-			H.change_stat("fortune", 2)
-
-
-	else
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-		
-		if(H.mind)
-			H.mind.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/masonry, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 6, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 6, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 6, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/smelting, 6, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-			if(H.age == AGE_OLD)
-				H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
-				H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)
-				H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 1, TRUE)
-				H.mind.adjust_skillrank(/datum/skill/craft/smelting, 1, TRUE)
-			H.change_stat("strength", 2)
-			H.change_stat("speed", -1)
-			H.change_stat("fortune", 3)
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/axes, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/masonry, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/smelting, 6, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+		if(H.age == AGE_OLD)
+			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 1, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/craft/smelting, 1, TRUE)
+		H.change_stat("strength", 2)
+		H.change_stat("speed", -1)
+		H.change_stat("fortune", 2)

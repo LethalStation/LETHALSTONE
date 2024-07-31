@@ -1,6 +1,6 @@
 //challenge class, spawns with no items at all
 /datum/advclass/nudist
-	name = "Nudist"
+	name = "Naked & Afraid"
 	tutorial = "You have come to this land wholly unprepared!\nSurvival will be a true TRIUMPH."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS

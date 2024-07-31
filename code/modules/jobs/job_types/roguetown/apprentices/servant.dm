@@ -26,6 +26,8 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
+		H.change_stat("perception", 1)
+
 	if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
@@ -34,7 +36,7 @@
 		neck = /obj/item/storage/belt/rogue/pouch
 		beltr = /obj/item/keyring/servant
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
-		H.change_stat("perception", 1)
+		
 	else
 		armor = /obj/item/clothing/suit/roguetown/shirt/rags
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
@@ -42,4 +44,3 @@
 		neck = /obj/item/storage/belt/rogue/pouch
 		belt = /obj/item/storage/belt/rogue/leather/rope
 		beltr = /obj/item/keyring/servant
-		H.change_stat("perception", 1)

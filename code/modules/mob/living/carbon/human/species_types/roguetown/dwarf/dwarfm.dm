@@ -39,6 +39,7 @@
 	hairyness = "t3"
 	soundpack_m = /datum/voicepack/male/dwarf
 	soundpack_f = /datum/voicepack/female/dwarf
+	race_bonus = list(STAT_CONSTITUTION = 1)
 	custom_clothes = TRUE
 	offset_features = list(
 		OFFSET_ID = list(0,-3), OFFSET_GLOVES = list(0,0), OFFSET_WRISTS = list(0,0),\

@@ -4,7 +4,7 @@
 /datum/species/anthromorph
 	name = "Wild-Kin"
 	id = "anthromorph"
-	desc = "Wild-Kin; a name for a furred creacher that does not fall under any particular race. \
+	desc = "Wild-Kin; a name for a furred creacher that does not fall under any particular race - demihumans are typically known as Half-Kin. \
 	It is sometimes difficult to tell one of us from another race at a glance; one of Wild-Kin ancestry may look very similar to a Tabaxi or Vulpkanin. \
 	Due to the fact we are so numerous, we are welcome almost anywhere, along with our Half-Kin sister-race \
 	We are average of constitution, strength, and intellegence."
@@ -40,6 +40,7 @@
 		)
 	specstats = list("strength" = 0, "perception" = 1, "intelligence" = -1, "constitution" = 0, "endurance" = 1, "speed" = -1, "fortune" = 0)
 	specstats_f = list("strength" = -1, "perception" = 0, "intelligence" = 2, "constitution" = -1, "endurance" = 0, "speed" = 1, "fortune" = 0)
+	race_bonus = list(STAT_PERCEPTION = 1)
 	enflamed_icon = "widefire"
 	organs = list(
 		ORGAN_SLOT_BRAIN = /obj/item/organ/brain,
