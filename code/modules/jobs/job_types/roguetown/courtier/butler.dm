@@ -30,6 +30,9 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
+		H.change_stat("strength", -1)
+		H.change_stat("intelligence", 1)
+		H.change_stat("perception", 1)
 
 	if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights
@@ -39,25 +42,18 @@
 		beltr = /obj/item/keyring/servant
 		neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
-		H.change_stat("strength", -1)
-		H.change_stat("intelligence", 1)
-		H.change_stat("perception", 1)
 	else
-		switch(H.patron?.type)
-			if(/datum/patron/divine/eora) //Eoran loadouts
-				armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy/black
-				pants = pick(/obj/item/clothing/under/roguetown/tights/stockings/silk/black, /obj/item/clothing/under/roguetown/tights/stockings/fishnet/black)
-				head  = /obj/item/clothing/head/peaceflower
-			else
-				armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen
-				pants = pick(/obj/item/clothing/under/roguetown/tights/stockings/black, /obj/item/clothing/under/roguetown/tights/stockings/white) //Added stockings for the maids
-
+		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen
+		pants = pick(/obj/item/clothing/under/roguetown/tights/stockings/black, /obj/item/clothing/under/roguetown/tights/stockings/white) //Added stockings for the maids
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		cloak = /obj/item/clothing/cloak/apron/waist
 		neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 		belt = /obj/item/storage/belt/rogue/leather
 		beltr = /obj/item/keyring/servant
-		H.change_stat("strength", -1)
-		H.change_stat("intelligence", 1)
-		H.change_stat("perception", 1)
+	
+	switch(H.patron?.type)
+		if(/datum/patron/divine/eora) //Eoran loadouts
+			armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy/black
+			pants = pick(/obj/item/clothing/under/roguetown/tights/stockings/silk/black, /obj/item/clothing/under/roguetown/tights/stockings/fishnet/black)
+			head  = /obj/item/clothing/head/peaceflower
 

@@ -15,17 +15,10 @@
 
 /datum/outfit/job/roguetown/adventurer/rogue/pre_equip(mob/living/carbon/human/H)
 	..()
-	// Contributor after choices, if not contributor defaults to el rogue.
-	var/classchoice
-	if(check_contributor(H.ckey))
-		H.adjust_blindness(-3)
-		H.visible_message(span_info("I contributed into this world, I have been around..."))
-		var/classes = list("Rogue","Assassin","Duelist")
-		classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
-	else //not contributor
-		H.adjust_blindness(-3)
-		var/classes = list("Rogue","Duelist",)
-		classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
+	// LETHALSTONE EDIT: removed some stupid "contributor only" check for duelist
+	H.adjust_blindness(-3)
+	var/classes = list("Rogue","Assassin","Duelist")
+	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 	switch(classchoice)
 		if("Rogue")
 			H.set_blindness(0)
@@ -150,8 +143,6 @@
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	belt = /obj/item/storage/belt/rogue/leather
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
-	if(H.gender == FEMALE && prob(25)) //funny
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/bikini
 	cloak = /obj/item/clothing/cloak/half
 	backl = /obj/item/storage/backpack/rogue/satchel
 	beltl = /obj/item/rogueweapon/sword/rapier

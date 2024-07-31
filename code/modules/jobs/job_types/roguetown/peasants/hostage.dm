@@ -38,17 +38,16 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 		H.change_stat("intelligence", 1)
 		H.change_stat("fortune", 2)
+		H.change_stat("strength", -1)
 		var/datum/antagonist/new_antag = new /datum/antagonist/prisoner()
 		H.mind.add_antag_datum(new_antag)
 	ADD_TRAIT(H, TRAIT_BANDITCAMP, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	if(H.gender == FEMALE)
-		H.change_stat("strength", -1)
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/purple
 		head = /obj/item/clothing/head/roguetown/hatblu
 		pants = /obj/item/clothing/under/roguetown/tights/stockings/silk/random	//Added Silk Stockings for the female hostages
 	if(H.gender == MALE)
-		H.change_stat("strength", -1)
 		pants = /obj/item/clothing/under/roguetown/tights/purple
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 		armor = /obj/item/clothing/suit/roguetown/shirt/tunic/blue

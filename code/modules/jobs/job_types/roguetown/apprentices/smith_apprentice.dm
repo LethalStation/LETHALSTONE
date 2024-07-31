@@ -8,6 +8,7 @@
 
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = list(AGE_ADULT)
+	allowed_sexes = list(MALE, FEMALE)
 
 	tutorial = "Long hours and back-breaking work wouldnt even describe a quarter of what you do in a day for your Master. Its exhausting, filthy and you dont get much freetime: but someday youll get your own smithy, and youll have TWICE as many apprentices as your master does."
 

@@ -116,7 +116,7 @@
 	if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/tights/black
 	else
-		H.underwear = "Femleotard"
+		H.underwear = "leotard"
 		H.underwear_color = CLOTHING_BLACK
 		H.update_body()
 		pants = /obj/item/clothing/under/roguetown/tights/black

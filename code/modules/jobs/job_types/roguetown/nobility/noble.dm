@@ -25,8 +25,16 @@
 		var/prev_real_name = H.real_name
 		var/prev_name = H.name
 		var/honorary = "Lord"
-		if(H.gender == FEMALE)
-			honorary = "Lady"
+		if (H.pronouns)
+			switch (H.pronouns)
+				if (HE_HIM)
+					honorary = "Lord"
+				if (SHE_HER)
+					honorary = "Lady"
+				if (THEY_THEM)
+					honorary = "Sovereign"
+				if (IT_ITS)
+					honorary = "Sovereign"
 		H.real_name = "[honorary] [prev_real_name]"
 		H.name = "[honorary] [prev_name]"
 

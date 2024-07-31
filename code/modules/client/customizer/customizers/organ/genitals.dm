@@ -3,7 +3,6 @@
 	name = "Penis"
 	allows_disabling = TRUE
 	default_disabled = TRUE
-	gender_enabled = MALE
 
 /datum/customizer/organ/penis/is_allowed(datum/preferences/prefs)
 	return TRUE
@@ -97,7 +96,6 @@
 	name = "Testicles"
 	allows_disabling = TRUE
 	default_disabled = TRUE
-	gender_enabled = MALE
 
 /datum/customizer/organ/testicles/is_allowed(datum/preferences/prefs)
 	return TRUE
@@ -179,7 +177,6 @@
 	name = "Breasts"
 	allows_disabling = TRUE
 	default_disabled = TRUE
-	gender_enabled = FEMALE
 
 /datum/customizer/organ/breasts/is_allowed(datum/preferences/prefs)
 	return TRUE
@@ -312,7 +309,6 @@
 	name = "Vagina"
 	allows_disabling = TRUE
 	default_disabled = TRUE
-	gender_enabled = FEMALE
 
 /datum/customizer/organ/vagina/is_allowed(datum/preferences/prefs)
 	return TRUE

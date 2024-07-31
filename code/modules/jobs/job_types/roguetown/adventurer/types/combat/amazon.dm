@@ -1,7 +1,7 @@
 /datum/advclass/amazon
 	name = "Amazon"
 	tutorial = "Amazons are warrior-women from the mysterious isle of Issa."
-	allowed_sexes = list(FEMALE)
+	allowed_sexes = list(MALE, FEMALE) // LETHALSTONE EDIT: dechud
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/amazon
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
@@ -47,7 +47,7 @@
 	H.change_stat("perception", 2)
 	H.change_stat("endurance", 2)
 	H.change_stat("speed", 1)
-	if(H.wear_mask) //for stupid retards with bad eyes
+	if(H.wear_mask)
 		var/obj/I = H.wear_mask
 		H.dropItemToGround(H.wear_mask, TRUE)
 		qdel(I)

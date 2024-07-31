@@ -78,14 +78,10 @@
 		head = /obj/item/clothing/head/roguetown/helmet/horned
 	if(prob(10))
 		head = /obj/item/clothing/head/roguetown/helmet/kettle
-	if(prob(50))
-		beltr = /obj/item/rogueweapon/sword
-		if(H.gender == FEMALE)
-			beltr = /obj/item/rogueweapon/sword/sabre
-	if(H.gender == FEMALE)
-		H.STASTR = 8
-	else
-		H.STASTR = 10
+	
+	beltr = pick(/obj/item/rogueweapon/sword, /obj/item/rogueweapon/sword/sabre)
+
+	H.STASTR = 10
 	H.STASPD = rand(7,10)
 	H.STAINT = 1
 	H.STACON = 3

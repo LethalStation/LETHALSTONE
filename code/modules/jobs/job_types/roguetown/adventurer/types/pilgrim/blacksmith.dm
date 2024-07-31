@@ -25,13 +25,12 @@
 	backpack_contents = list(/obj/item/flint = 1, /obj/item/rogueore/coal=1, /obj/item/rogueore/iron=1)
 
 	if(H.gender == MALE)
-
 		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
 	else
-		
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
+
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, pick(1,2), TRUE) // If you can make a sword you can swing one.
 		H.mind.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE) 
