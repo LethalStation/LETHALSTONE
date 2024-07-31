@@ -70,14 +70,13 @@
 		// LETHALSTONE EDIT: apply our chosen preference of statpack
 		if (H.statpack)
 			H.statpack.apply_to_human(H)
-		var/mob/living/carbon/human/species/S = src
-		if (S.race) // LETHALSTONE EDIT: apply our race bonus, if we have one
-			var/datum/species/species = S.race
+		if (H.dna?.species) // LETHALSTONE EDIT: apply our race bonus, if we have one
+			var/datum/species/species = H.dna.species
 			if (species.race_bonus)
 				for (var/stat in species.race_bonus)
 					var/amt = species.race_bonus[stat]
 					H.change_stat(stat, amt)
-		
+
 		switch(H.age)
 			if(AGE_MIDDLEAGED)
 				change_stat("speed", -1)
