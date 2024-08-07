@@ -95,7 +95,6 @@
 	result = /obj/item/reagent_containers/food/snacks/rogue/piedough
 
 
-
 /datum/crafting_recipe/roguetown/cooking/berrypie
 	name = "berry pie"
 	reqs = list(
