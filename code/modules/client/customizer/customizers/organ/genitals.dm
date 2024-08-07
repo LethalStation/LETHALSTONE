@@ -48,47 +48,121 @@
 /datum/customizer/organ/penis/human
 	customizer_choices = list(/datum/customizer_choice/organ/penis/human)
 
-/datum/customizer_choice/organ/penis/human
-	sprite_accessories = list(/datum/sprite_accessory/penis/human)
-	allows_accessory_color_customization = FALSE
-
 /datum/customizer/organ/penis/anthro
-	customizer_choices = list(/datum/customizer_choice/organ/penis/anthro)
-
-/datum/customizer_choice/organ/penis/anthro
-	sprite_accessories = list(
-		/datum/sprite_accessory/penis/human,
-		/datum/sprite_accessory/penis/thick,
-		/datum/sprite_accessory/penis/knotted,
-		/datum/sprite_accessory/penis/knotted2,
-		/datum/sprite_accessory/penis/flared,
-		/datum/sprite_accessory/penis/barbknot,
-		/datum/sprite_accessory/penis/tapered,
-		/datum/sprite_accessory/penis/hemi,
-		/datum/sprite_accessory/penis/hemiknot,
-		/datum/sprite_accessory/penis/tentacle,
+	customizer_choices = list(
+		/datum/customizer_choice/organ/penis/human_anthro,
+		/datum/customizer_choice/organ/penis/knotted,
+		/datum/customizer_choice/organ/penis/equine,
+		/datum/customizer_choice/organ/penis/tapered_mammal,
+		/datum/customizer_choice/organ/penis/tapered,
+		/datum/customizer_choice/organ/penis/tapered_double,
+		/datum/customizer_choice/organ/penis/tapered_double_knot,
+		/datum/customizer_choice/organ/penis/barbed,
+		/datum/customizer_choice/organ/penis/barbed_knotted,
+		/datum/customizer_choice/organ/penis/tentacle,
 		)
 
-/datum/customizer/organ/penis/knotted
-	customizer_choices = list(/datum/customizer_choice/organ/penis/knotted)
+/datum/customizer/organ/penis/canine
+	customizer_choices = list(
+		/datum/customizer_choice/organ/penis/human_anthro,
+		/datum/customizer_choice/organ/penis/knotted,
+		)
 
-/datum/customizer_choice/organ/penis/knotted
-	sprite_accessories = list(
-		/datum/sprite_accessory/penis/human,
-		/datum/sprite_accessory/penis/knotted,
-		/datum/sprite_accessory/penis/knotted2,
-		/datum/sprite_accessory/penis/barbknot,
+/datum/customizer/organ/penis/feline
+	customizer_choices = list(
+		/datum/customizer_choice/organ/penis/human_anthro,
+		/datum/customizer_choice/organ/penis/barbed,
+		/datum/customizer_choice/organ/penis/barbed_knotted,
 		)
 
 /datum/customizer/organ/penis/lizard
-	customizer_choices = list(/datum/customizer_choice/organ/penis/lizard)
+	customizer_choices = list(
+		/datum/customizer_choice/organ/penis/human_anthro,
+		/datum/customizer_choice/organ/penis/tapered,
+		/datum/customizer_choice/organ/penis/tapered_double,
+		/datum/customizer_choice/organ/penis/tapered_double_knot,
+		)
 
-/datum/customizer_choice/organ/penis/lizard
+/datum/customizer/organ/penis/equine
+	customizer_choices = list(
+		/datum/customizer_choice/organ/penis/human_anthro,
+		/datum/customizer_choice/organ/penis/equine,
+		)
+
+/datum/customizer_choice/organ/penis/human
+	name = "Plain Penis"
+	organ_type = /obj/item/organ/penis
+	sprite_accessories = list(/datum/sprite_accessory/penis/human)
+	allows_accessory_color_customization = FALSE
+
+/datum/customizer_choice/organ/penis/human_anthro
+	name = "Plain Penis"
+	organ_type = /obj/item/organ/penis
+	sprite_accessories = list(/datum/sprite_accessory/penis/human)
+	allows_accessory_color_customization = TRUE
+
+/datum/customizer_choice/organ/penis/knotted
+	name = "Knotted Penis"
+	organ_type = /obj/item/organ/penis/knotted
 	sprite_accessories = list(
-		/datum/sprite_accessory/penis/human,
+		/datum/sprite_accessory/penis/knotted,
+		/datum/sprite_accessory/penis/knotted2,
+		)
+	
+/datum/customizer_choice/organ/penis/equine
+	name = "Equine Penis"
+	organ_type = /obj/item/organ/penis/equine
+	sprite_accessories = list(
+		/datum/sprite_accessory/penis/flared,
+		)
+
+/datum/customizer_choice/organ/penis/tapered_mammal
+	name = "Tapered Penis (Mammal)"
+	organ_type = /obj/item/organ/penis/tapered_mammal
+	sprite_accessories = list(
+		/datum/sprite_accessory/penis/tapered_mammal,
+		)
+
+/datum/customizer_choice/organ/penis/tapered
+	name = "Tapered Penis"
+	organ_type = /obj/item/organ/penis/tapered
+	sprite_accessories = list(
 		/datum/sprite_accessory/penis/tapered,
+		)
+
+/datum/customizer_choice/organ/penis/tapered_double
+	name = "Hemi Tapered Penis"
+	organ_type = /obj/item/organ/penis/tapered
+	sprite_accessories = list(
 		/datum/sprite_accessory/penis/hemi,
+		)
+
+/datum/customizer_choice/organ/penis/tapered_double_knot
+	name = "Knotted Hemi Tapered Penis"
+	organ_type = /obj/item/organ/penis/tapered
+	sprite_accessories = list(
 		/datum/sprite_accessory/penis/hemiknot,
+		)
+
+/datum/customizer_choice/organ/penis/barbed
+	name = "Barbed Penis"
+	organ_type = /obj/item/organ/penis/barbed
+	sprite_accessories = list(
+		/datum/sprite_accessory/penis/barbknot,
+		)
+
+/datum/customizer_choice/organ/penis/barbed_knotted
+	name = "Barbed Knotted Penis"
+	organ_type = /obj/item/organ/penis/barbed_knotted
+	sprite_accessories = list(
+		/datum/sprite_accessory/penis/barbknot,
+		)
+
+/datum/customizer_choice/organ/penis/tentacle
+	name = "Tentacle Penis"
+	organ_type = /obj/item/organ/penis/tentacle
+	sprite_accessories = list(
+		/datum/sprite_accessory/penis/tentacle,
 		)
 
 /datum/customizer/organ/testicles
@@ -116,28 +190,31 @@
 
 /datum/customizer_choice/organ/testicles/imprint_organ_dna(datum/organ_dna/organ_dna, datum/customizer_entry/entry, datum/preferences/prefs)
 	..()
+	var/datum/organ_dna/testicles/testicles_dna = organ_dna
+	var/datum/customizer_entry/organ/testicles/testicles_entry = entry
 	if(can_customize_size)
-		var/datum/organ_dna/testicles/testicles_dna = organ_dna
-		var/datum/customizer_entry/organ/testicles/testicles_entry = entry
 		testicles_dna.ball_size = testicles_entry.ball_size
+	testicles_dna.virility = testicles_entry.virility
 
 /datum/customizer_choice/organ/testicles/generate_pref_choices(list/dat, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
 	..()
+	var/datum/customizer_entry/organ/testicles/testicles_entry = entry
 	if(can_customize_size)
-		var/datum/customizer_entry/organ/testicles/testicles_entry = entry
 		dat += "<br>Ball size: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=ball_size''>[find_key_by_value(GLOB.named_ball_sizes, testicles_entry.ball_size)]</a>"
+	dat += "<br>Virile: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=virile''>[testicles_entry.virility ? "Virile" : "Sterile"]</a>"
 
 /datum/customizer_choice/organ/testicles/handle_topic(mob/user, list/href_list, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
 	..()
-	if(can_customize_size)
-		var/datum/customizer_entry/organ/testicles/testicles_entry = entry
-		switch(href_list["customizer_task"])
-			if("ball_size")
-				var/named_size = input(user, "Choose your ball size:", "Character Preference", find_key_by_value(GLOB.named_ball_sizes, testicles_entry.ball_size)) as anything in GLOB.named_ball_sizes
-				if(isnull(named_size))
-					return
-				var/new_size = GLOB.named_ball_sizes[named_size]
-				testicles_entry.ball_size = sanitize_integer(new_size, MIN_TESTICLES_SIZE, MAX_TESTICLES_SIZE, DEFAULT_TESTICLES_SIZE)
+	var/datum/customizer_entry/organ/testicles/testicles_entry = entry
+	switch(href_list["customizer_task"])
+		if("ball_size")
+			var/named_size = input(user, "Choose your ball size:", "Character Preference", find_key_by_value(GLOB.named_ball_sizes, testicles_entry.ball_size)) as anything in GLOB.named_ball_sizes
+			if(isnull(named_size))
+				return
+			var/new_size = GLOB.named_ball_sizes[named_size]
+			testicles_entry.ball_size = sanitize_integer(new_size, MIN_TESTICLES_SIZE, MAX_TESTICLES_SIZE, DEFAULT_TESTICLES_SIZE)
+		if("virile")
+			testicles_entry.virility = !testicles_entry.virility
 
 /datum/customizer/organ/testicles/external
 	customizer_choices = list(/datum/customizer_choice/organ/testicles/external)
@@ -171,6 +248,7 @@
 
 /datum/customizer_entry/organ/testicles
 	var/ball_size = DEFAULT_TESTICLES_SIZE
+	var/virility = TRUE
 
 /datum/customizer/organ/breasts
 	abstract_type = /datum/customizer/organ/breasts
@@ -314,8 +392,32 @@
 /datum/customizer_choice/organ/vagina
 	abstract_type = /datum/customizer_choice/organ/vagina
 	name = "Vagina"
+	customizer_entry_type = /datum/customizer_entry/organ/vagina
 	organ_type = /obj/item/organ/vagina
 	organ_slot = ORGAN_SLOT_VAGINA
+	organ_dna_type = /datum/organ_dna/vagina
+
+/datum/customizer_entry/organ/vagina
+	var/fertility = TRUE
+
+/datum/customizer_choice/organ/vagina/imprint_organ_dna(datum/organ_dna/organ_dna, datum/customizer_entry/entry, datum/preferences/prefs)
+	..()
+	var/datum/organ_dna/vagina/vagina_dna = organ_dna
+	var/datum/customizer_entry/organ/vagina/vagina_entry = entry
+	vagina_dna.fertility = vagina_entry.fertility
+
+/datum/customizer_choice/organ/vagina/generate_pref_choices(list/dat, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
+	..()
+	var/datum/customizer_entry/organ/vagina/vagina_entry = entry
+	dat += "<br>Fertile: <a href='?_src_=prefs;task=change_customizer;customizer=[customizer_type];customizer_task=fertile''>[vagina_entry.fertility ? "Fertile" : "Sterile"]</a>"
+
+/datum/customizer_choice/organ/vagina/handle_topic(mob/user, list/href_list, datum/preferences/prefs, datum/customizer_entry/entry, customizer_type)
+	..()
+	var/datum/customizer_entry/organ/vagina/vagina_entry = entry
+	switch(href_list["customizer_task"])
+		if("fertile")
+			vagina_entry.fertility = !vagina_entry.fertility
+			
 
 /datum/customizer/organ/vagina/human
 	customizer_choices = list(/datum/customizer_choice/organ/vagina/human)
@@ -328,6 +430,17 @@
 		/datum/sprite_accessory/vagina/extrahairy,
 		)
 	allows_accessory_color_customization = FALSE
+
+/datum/customizer/organ/vagina/human_anthro
+	customizer_choices = list(/datum/customizer_choice/organ/vagina/human_anthro)
+
+/datum/customizer_choice/organ/vagina/human_anthro
+	sprite_accessories = list(
+		/datum/sprite_accessory/vagina/human,
+		/datum/sprite_accessory/vagina/gaping,
+		/datum/sprite_accessory/vagina/hairy,
+		)
+	allows_accessory_color_customization = TRUE
 
 /datum/customizer/organ/vagina/animal
 	customizer_choices = list(/datum/customizer_choice/organ/vagina/animal)
