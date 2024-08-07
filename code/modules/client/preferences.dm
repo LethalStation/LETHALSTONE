@@ -156,6 +156,8 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/list/violated = list()
 	var/list/descriptor_entries = list()
 
+	var/datum/char_accent = new /datum/char_accent/none()
+
 
 /datum/preferences/New(client/C)
 	parent = C
@@ -420,7 +422,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<br>"
 			dat += "<b>Voice Color: </b><a href='?_src_=prefs;preference=voice;task=input'>Change</a>"
 
-
+			dat += "<br><b>Accent:</b> <a href='?_src_=prefs;preference=char_accent;task=input'>[char_accent]</a>"
 			dat += "<br><b>Features:</b> <a href='?_src_=prefs;preference=customizers;task=menu'>Change</a>"
 			dat += "<br><b>Markings:</b> <a href='?_src_=prefs;preference=markings;task=menu'>Change</a>"
 			dat += "<br><b>Descriptors:</b> <a href='?_src_=prefs;preference=descriptors;task=menu'>Change</a>"
@@ -1622,6 +1624,13 @@ Slots: [job.spawn_positions]</span>
 							to_chat(user, "<span class='info'>[charflaw.desc]</span>")
 
 
+				if("char_accent")
+					var/list/accent = GLOB.character_accents.Copy()
+					var/result = input(user, "Select an accent", "Roguetown") as null|anything in accent
+					if(result)
+						result = accent[result]
+						var/datum/char_accent/C = new result()
+						char_accent = C
 
 				if("mutant_color")
 					var/new_mutantcolor = color_pick_sanitized_lumi(user, "Choose your character's mutant #1 color:", "Character Preference","#"+features["mcolor"])
@@ -1669,6 +1678,13 @@ Slots: [job.spawn_positions]</span>
 						charflaw = new charflaw()
 						if(charflaw.desc)
 							to_chat(user, span_info("[charflaw.desc]"))
+
+				if("char_accent")
+					var/selectedaccent
+					selectedaccent = input(user, "Choose your character's accent:", "Character Preference") as null|anything in GLOB.character_accents
+					if(selectedaccent)
+						char_accent = GLOB.character_accents[selectedaccent]
+						char_accent = new char_accent()
 
 				if("ooccolor")
 					var/new_ooccolor = input(user, "Choose your OOC colour:", "Game Preference",ooccolor) as color|null
@@ -2125,6 +2141,8 @@ Slots: [job.spawn_positions]</span>
 		character.update_body()
 		character.update_hair()
 		character.update_body_parts(redraw = TRUE)
+
+	character.char_accent = char_accent
 
 /datum/preferences/proc/get_default_name(name_id)
 	switch(name_id)
